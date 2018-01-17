@@ -15,6 +15,8 @@ app.use(methodOverride('_method'));
 
 
 // CONTROLLERS
+const UserController = require('./controllers/userController.js')
+app.use('/users', UserController)
 
 
 // HOME ROUTE
