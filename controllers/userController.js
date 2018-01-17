@@ -38,6 +38,32 @@ router.get('/:id', (req, res) => {
 	})
 })
 
+// EDIT ROUTE - server the user the edit form
+router.get('/:id/edit', (req, res) => {
+	User.findById(req.params.id, (err, foundUser) => {
+			if(err) console.log(err)
+			res.render('users/edit.ejs', { user: foundUser })
+	})
+})
+
+// PUT ROUTE - to save new info
+router.put('/:id', (req, res) => {
+	User.findByIdAndUpdate(req.params.id, 
+		req.body,
+		(err, updatedUser) => {
+			if(err) console.log(err)
+			res.redirect('/users')
+		})
+})
+
+// DELETE ROUTE
+router.delete('/:id', (req, res) => {
+	User.findByIdAndRemove(req.params.id, (err, response) => {
+		if(err) console.log(err)
+			res.redirect('/users')
+	})
+})
+
 
 // EXPORT
 module.exports = router; 

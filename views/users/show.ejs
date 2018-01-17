@@ -22,9 +22,13 @@
 		<br>
 		Location: <%=user.location %>
 		<br>
-		<button formaction="/users/<%=user.id%>/edit" formmethod="GET">Edit User</button>
+		<a href="/users/<%=user.id%>/edit""><button>Edit User</button></a>
 		<br>
-		<button>Delete User</button>
+		<form action="/users/<%=user.id %>/?_method=DELETE" method="POST">
+			<button>Delete User</button>
+		</form>
+
+		<!-- photo information will go in here as well -->
 		
 	</main>
 
