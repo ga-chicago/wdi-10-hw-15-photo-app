@@ -9,15 +9,19 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="">Home</a>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/users">All Users</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<form>
+		<form action="/users" method="POST">
 			<input type="text" name="username" placeholder="username">
+			<input type="text" name="name" placeholder="name">
 			<input type="text" name="location" placeholder="location">
 			<input type="text" name="password" placeholder="password">
 			<input type="submit" name="" value="Create User">

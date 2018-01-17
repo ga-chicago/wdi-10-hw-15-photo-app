@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=user.username %></title>
+</head>
+<body>
+	<header>
+		<h1><%=user.username %>'s Profile</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/users">All Users</a>
+				</li>
+				<li>
+					<a href="">All Photos</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		Name: <%=user.name %>
+		<br>
+		Location: <%=user.location %>
+		<br>
+		<button formaction="/users/<%=user.id%>/edit" formmethod="GET">Edit User</button>
+		<br>
+		<button>Delete User</button>
+		
+	</main>
+
+</body>
+</html>
