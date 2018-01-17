@@ -1,7 +1,7 @@
-const mongooose = require('mongoose');
+const mongoose = require('mongoose');
 
 // set up connection
-mongoose.connect('mongodb://localhost:27017/photoapp', { useMongoClien: true });
+mongoose.connect('mongodb://localhost:27017/photoapp', { useMongoClient: true });
 
 // connection
 mongoose.connection.on('connected', () => {

@@ -4,18 +4,23 @@ const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
+
 // DB
 require('./db/db.js')
+
 
 // MIDDLEWARE
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
+
 // CONTROLLERS
 
 
 // HOME ROUTE
-
+app.get('/', (req, res) => {
+	res.render('index.ejs')
+})
 
 // LISTENER
 app.listen(3000, () => {
