@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Create User Profile</title>
+	<title>Register</title>
 </head>
 <body>
 	<header>
 		<h1>Welcome!</h1>
+		<h2>Create Your Account: </h2>
 		<nav>
 			<ul>
 				<li>
-					<a href="/">Home</a>
+					<a href="/home">Home</a>
 				</li>
 				<li>
 					<a href="/users">All Users</a>
+				</li>
+				<li>
+					<a href="/photos">All Photos</a>
 				</li>
 			</ul>
 		</nav>
@@ -20,10 +24,10 @@
 
 	<main>
 		<form action="/users" method="POST">
-			<input type="text" name="username" placeholder="username">
-			<input type="text" name="name" placeholder="name">
-			<input type="text" name="location" placeholder="location">
-			<input type="text" name="password" placeholder="password">
+			<input type="text" name="name" placeholder="Name">
+			<input type="text" name="location" placeholder="Location">
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
 			<input type="submit" name="" value="Create User">
 		</form>
 	</main>

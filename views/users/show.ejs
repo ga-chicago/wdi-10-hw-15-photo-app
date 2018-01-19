@@ -12,7 +12,7 @@
 					<a href="/users">All Users</a>
 				</li>
 				<li>
-					<a href="">All Photos</a>
+					<a href="/photos">All Photos</a>
 				</li>
 			</ul>
 		</nav>
@@ -27,8 +27,10 @@
 		<form action="/users/<%=user.id %>/?_method=DELETE" method="POST">
 			<button>Delete User</button>
 		</form>
-
-		<!-- photo information will go in here as well -->
+		<h2>My Photos</h2>
+		<% for (let i = 0; i < user.photos.length; i++) { %>
+			<img src="user.photos[i].image">
+		<% } %>
 		
 	</main>
 

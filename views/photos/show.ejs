@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=photo.username %>'s Photo</title>
+</head>
+<body>
+	<header>
+		<h1><%=photo.username %>'s Photo</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/users">All Users</a>
+				</li>
+				<li>
+					<a href="/photos">All Photos</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<a href="/users/<%=user._id%>"><%=user.username %>'s Profile</a>
+		<h4>Description:</h4> 
+		<%=photo.photoInfo%>
+		<br>
+		<img src="<%=photo.image%>">
+		<br>
+		<a href="/photos/<%=photo.id%>/edit""><button>Edit Photo</button></a>
+		<form action="/photos/<%=photo.id %>/?_method=DELETE" method="POST">
+			<button>Delete Photo</button>
+		</form>
+		
+	</main>
+
+</body>
+</html>

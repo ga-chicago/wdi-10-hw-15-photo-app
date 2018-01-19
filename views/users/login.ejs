@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+	<h1>Login Here</h1>
+	<nav>
+			<ul>
+				<li>
+					<a href="/home">Home</a>
+				</li>
+				<li>
+					<a href="/users">All Users</a>
+				</li>
+				<li>
+					<a href="/photos">All Photos</a>
+				</li>
+			</ul>
+		</nav>
+	<form action="/users/login" method="POST">
+		<input type="text" name="username" placeholder="Username">
+		<input type="password" name="password" placeholder="Password">
+		<button>Login</button>
+	</form>
+
+	
+
+	<p>Need an account? Sign up <a href="/users/new">here</a>.</p>
+</body>
+</html>

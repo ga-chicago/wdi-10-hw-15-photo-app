@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/kmikitin/wdi-10-hw-15-photo-app#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "gulp": "^3.9.1",
     "gulp-less": "^3.4.0",
     "method-override": "^2.3.10",

@@ -6,6 +6,17 @@
 <body>
 	<header>
 		<h1>Edit <%=user.username %>'s Profile</h1>
+		<nav>
+			<li>
+				<a href="/home">Home</a>
+			</li>
+			<li>
+				<a href="/photos">Photos</a>
+			</li>
+			<li>
+				<a href="/users">Users</a>
+			</li>
+		</nav>
 	</header>
 	<main>
 		<form action="/users/<%=user.id %>/?_method=PUT" method="POST">
@@ -15,7 +26,7 @@
 			<br>
 			<input type="text" name="location" value="<%=user.location %>">
 			<br>
-			<input type="text" name="password" value="<%=user.password %>">
+			<input type="text" name="password">
 			<br>
 			<input type="submit" name="" value="Update User">
 		</form>

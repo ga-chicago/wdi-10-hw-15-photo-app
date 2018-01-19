@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photos</title>
+</head>
+<body>
+	<header>
+		<h1>Photo Feed</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/home">Home</a>
+				</li>
+				<li>
+					<a href="/photos/new">Add Your Photo</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<ul>
+			<% for (let i = 0; i < photos.length; i++) { %>
+				<li><a href="/photos/<%=photos[i].id %>"><img src="<%=photos[i].image %>"></a>
+					<br>
+					<%=photos[i].photoInfo %>
+					<br>
+					posted by: <%=photos[i].username %>
+				</li>
+			<% } %>
+		</ul>
+	</main>
+
+</body>
+</html>

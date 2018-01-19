@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 
+// require photo model
+const Photo = require('./photos.js');
+
 // create the schema
 const userSchema = new mongoose.Schema({
 	username: String,
 	name: String,
 	location: String,
-	password: String
+	password: String,
+	photos: [Photo.schema]
 });
 
 // create the model

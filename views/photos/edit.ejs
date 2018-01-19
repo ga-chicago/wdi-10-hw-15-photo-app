@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Photo</title>
+</head>
+<body>
+	<h1>Edit Photo</h1>
+	<nav>
+		<li>
+			<a href="/home">Home</a>
+		</li>
+		<li>
+			<a href="/photos">Photos</a>
+		</li>
+		<li>
+			<a href="/users">Users</a>
+		</li>
+	</nav>
+
+	<main>
+		<form action="/photos/<%=photo.id%>/?_method=PUT" method="POST">
+			<input type="text" name="username" value="<%=photo.username%>">
+			<br>
+			<input type="text" name="image" value="<%=photo.image%>">
+			<br>
+			<textarea name="photoInfo" rows="10" cols="50"><%=photo.photoInfo%></textarea>
+			<br>
+			<button>Update Photo</button>
+		</form>
+	</main>
+
+</body>
+</html>
